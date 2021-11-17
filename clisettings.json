@@ -1,0 +1,30 @@
+{
+  "projects": null,
+  "path": "C:\\Projects\\AngularStateManagement",
+  "solutionName": null,
+  "rootNamespace": null,
+  "domainNamespace": "AngularStateManagement.Api",
+  "applicationNamespace": "AngularStateManagement.Api",
+  "infrastructureNamespace": "AngularStateManagement.Api",
+  "apiNamespace": "AngularStateManagement.Api",
+  "domainDirectory": "C:\\Projects\\AngularStateManagement\\src\\AngularStateManagement.Api",
+  "applicationDirectory": "C:\\Projects\\AngularStateManagement\\src\\AngularStateManagement.Api",
+  "infrastructureDirectory": "C:\\Projects\\AngularStateManagement\\src\\AngularStateManagement.Api",
+  "apiDirectory": "C:\\Projects\\AngularStateManagement\\src\\AngularStateManagement.Api",
+  "appDirectories": ["C:\\Projects\\AngularStateManagement\\src\\AngularStateManagement.App"],
+  "buildingBlocksCoreNamespace": "BuildingBlocks.Core",
+  "buildingBlocksEventStoreNamespace": "BuildingBlocks.EventStore",
+  "store": null,
+  "namespace": null,
+  "domain": null,
+  "core": null,
+  "api": null,
+  "entityIdDataType": null,
+  "sourceFolder": "src",
+  "testFolder": null,
+  "dbContext": "AngularStateManagementDbContext",
+  "eventSourcing": false,
+  "resources": [
+    "ToDo"
+  ]
+}
