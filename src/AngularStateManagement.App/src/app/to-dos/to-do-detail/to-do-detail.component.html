@@ -1,0 +1,17 @@
+<h1>Create To Do</h1>
+
+<form [formGroup]="form">
+  <div class="g-form-field">
+    <label>Description</label>
+    <input type="text" formControlName="description">
+  </div>
+
+  <div class="g-form-field">
+    <label>Status</label>
+    <input type="text" formControlName="status">
+  </div>
+</form>
+
+<button (click)="save(form.value)">
+  Save
+</button>

@@ -1,6 +1,8 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { baseUrl } from '@core';
+import { ToDosPanelModule } from '@shared/to-dos-panel/to-dos-panel.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,12 +13,14 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ToDosPanelModule
   ],
   providers: [
     {
       provide: baseUrl,
-      useValue: "http://localhost:5001/"
+      useValue: "https://localhost:5001/"
     }
   ],
   bootstrap: [AppComponent]

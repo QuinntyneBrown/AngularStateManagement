@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NotFoundComponent } from './not-found/not-found.component';
+import { ToDosPanelComponent } from './to-dos-panel.component';
+
 
 
 
 @NgModule({
   declarations: [
-    NotFoundComponent
+    ToDosPanelComponent
+  ],
+  exports: [
+    ToDosPanelComponent
   ],
   imports: [
     CommonModule
   ]
 })
-export class NotFoundModule { }
+export class ToDosPanelModule { }

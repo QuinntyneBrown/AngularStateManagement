@@ -10,8 +10,6 @@ import { baseUrl } from '@core';
 })
 export class ToDoService {
 
-  uniqueIdentifierName: string = "toDoId";
-
   constructor(
     @Inject(baseUrl) private readonly _baseUrl: string,
     private readonly _client: HttpClient
