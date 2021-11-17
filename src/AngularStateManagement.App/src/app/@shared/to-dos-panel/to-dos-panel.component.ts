@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ToDoService } from '@api';
-import { map } from 'rxjs/operators';
+import { Component } from '@angular/core';
+import { ToDoStore } from '@core/to-do.store';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-to-dos-panel',
@@ -9,13 +9,13 @@ import { map } from 'rxjs/operators';
 })
 export class ToDosPanelComponent {
 
-  public vm$ = this._toDoService
+  public vm$ = this._toDoStore
   .get()
   .pipe(
     map(toDos => ({ toDos }))
   )
   constructor(
-    private readonly _toDoService: ToDoService
+    private readonly _toDoStore: ToDoStore
   ) {
 
   }

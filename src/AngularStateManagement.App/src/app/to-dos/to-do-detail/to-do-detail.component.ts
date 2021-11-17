@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ToDo, ToDoService } from '@api';
+import { ToDo } from '@api';
+import { ToDoStore } from '@core/to-do.store';
 
 @Component({
   selector: 'app-to-do-detail',
@@ -15,13 +16,13 @@ export class ToDoDetailComponent  {
     status: new FormControl(null, [Validators.required])
   })
   constructor(
-    private readonly _toDoService: ToDoService
+    private readonly _toDoStore: ToDoStore
   ) {
 
   }
 
   public save(toDo: ToDo) {
-    this._toDoService.create({ toDo })
+    this._toDoStore.create({ toDo })
     .subscribe();
   }
 }

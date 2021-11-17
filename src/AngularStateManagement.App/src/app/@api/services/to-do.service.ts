@@ -11,8 +11,8 @@ import { baseUrl } from '@core';
 export class ToDoService {
 
   constructor(
-    @Inject(baseUrl) private readonly _baseUrl: string,
-    private readonly _client: HttpClient
+    @Inject(baseUrl) public readonly _baseUrl: string,
+    public readonly _client: HttpClient
   ) { }
 
 

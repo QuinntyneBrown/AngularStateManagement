@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ToDoService } from '@api/services/to-do.service';
+import { Component } from '@angular/core';
+import { ToDoStore } from '@core/to-do.store';
 import { map } from 'rxjs/operators';
 
 @Component({
@@ -8,15 +8,13 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./to-do-list.component.scss']
 })
 export class ToDoListComponent  {
-  public vm$ = this._toDoService
+  public vm$ = this._toDoStore
   .get()
   .pipe(
     map(toDos => ({ toDos }))
   )
   constructor(
-    private readonly _toDoService: ToDoService
-  ) {
-
-  }
+    private readonly _toDoStore: ToDoStore
+  ) { }
 
 }
